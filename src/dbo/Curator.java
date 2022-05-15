@@ -10,4 +10,12 @@ public class Curator extends DboAbstact{
     }
     private int id;
     private String fio;
+
+    public int getId() {
+        return this.id;
+    }
+
+    public String getFio() {
+        return this.fio;
+    }
 }
