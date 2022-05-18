@@ -2,7 +2,7 @@ package db;
 
 import java.sql.ResultSet;
 
-public interface Interface {
+public interface IDbExecutor {
     //Добавляем методы
     ResultSet execute(String sqlRequest);//Принимает в ()
     // модификатор package, потому что он нигде не будет реализовываться

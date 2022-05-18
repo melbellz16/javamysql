@@ -6,7 +6,7 @@ import utils.recources.ReadPropertiesFromPropsFile;
 import java.sql.*;
 import java.util.Properties;
 
-public class MySqlDBexecutor implements Interface {
+public class MySqlDbExecutor implements IDbExecutor {
     //Используем static, чтобы избежать лишних подключений в базе данных
     private static Connection connect = null;
     //Чтобы не сгенерировать много statement мы должны сгенерировать static
