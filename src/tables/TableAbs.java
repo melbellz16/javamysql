@@ -15,7 +15,7 @@ public abstract class TableAbs {
         //toLowerCase(Locale.ROOT), пишем чтобы не был привязан к размеру и виду текста
         switch (dbType.toLowerCase(Locale.ROOT)){
             case "mysql":{
-                dbExecutor = new MySqlDbExecutor();
+                dbExecutor = new MySqlDbExecutor(); //создаем объект для MySqldb
                 break;
             }
         }
