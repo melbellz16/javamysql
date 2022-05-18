@@ -5,7 +5,8 @@ import dbo.Student;
 import java.util.List;
 
 //Реализуем интерфейс
-public class StudentTable implements ITable<Student> { //  в таблицу Student передаем объект Student
+public class StudentTable { //  в таблицу Student передаем объект Student
+    // реализуем интерфейс в нашем родителе TableABs
 
 
 
