@@ -1,12 +1,12 @@
 package dbo;
 
-public class Student<privat> extends DboAbstact {
-    //private String tableName = "Student"; //помечаем принадлежность к таблице Student
-public Student (int id, int idGroup, String fio, String sex) {
-    super("Student");
+public class Student {
 
+    public final static String tableName = "Student";
+
+public Student (int id, int idGroup, String fio, String sex) {
     this. id = id;//  инициализируем всегда после создания метода, так как конструктор должен сначала инициализировать поля родителя
-    this.idGroup = idGroup; //this. это ссылка на текущей объект
+    this.idGroup = idGroup; //This - это ссылка на текущей объект
     this.fio = fio;
     this.sex = sex;
 }

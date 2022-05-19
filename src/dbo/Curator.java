@@ -1,9 +1,10 @@
 package dbo;
 
-public class Curator extends DboAbstact{
+public class Curator {
+
+    public final static String tableName = "Curator";
     //private String tableName = "Curator"; //помечаем принадлежность к таблице Curator
     public Curator(int id, String fio){
-        super("Curator");
 
         this.id = id;
         this.fio = fio;
