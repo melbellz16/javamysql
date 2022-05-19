@@ -4,6 +4,7 @@ import dbo.Student;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 //Реализуем интерфейс
@@ -21,9 +22,19 @@ public StudentTable(String dbType){
    @Override
     public List<Student> list() {
        ResultSet resultSet = this.dbExecutor.execute(String.format(" select *from %s", Student.tableName));
+
+       List<Student> students = new ArrayList<>();
+       //Определяем реализацию,как Лист, так как мы просто будем его добавлять и последовательно читать
+
 try {
 while (resultSet.next()){
-   // resultSet.getString(1)
+    students.add(new Student( //создаем обьект студента и инициализируем
+            resultSet.getInt(1),
+            resultSet.getInt(4),
+            resultSet.getString(2),
+            resultSet.getString(3)
+    ));
+
     }
    }catch (SQLException ex){
     ex.printStackTrace();
