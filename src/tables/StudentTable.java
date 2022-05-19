@@ -1,5 +1,6 @@
 package tables;//package tables;
 
+import db.MySqlDbExecutor;
 import dbo.Student;
 
 import java.sql.ResultSet;
@@ -38,6 +39,11 @@ while (resultSet.next()){
     }
    }catch (SQLException ex){
     ex.printStackTrace();
+   }finally { //закрываем коннект
+
+   this.dbExecutor.close();
    }
+
+return students;
  }
 }
