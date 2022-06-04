@@ -1,6 +1,6 @@
 package tables;//package tables;
 
-import db.MySqlDbExecutor;
+import dbo.Curator;
 import dbo.Student;
 
 import java.sql.ResultSet;
@@ -15,18 +15,14 @@ private Student student;
 
 public StudentTable(String dbType){
     super(dbType);
-
 }
-
-
 //Реализуем интерфейс
    @Override
-    public List<Student> list() {
+    public List<Curator> list() {
        ResultSet resultSet = this.dbExecutor.execute(String.format(" select *from %s", Student.tableName));
 
        List<Student> students = new ArrayList<>();
        //Определяем реализацию,как Лист, так как мы просто будем его добавлять и последовательно читать
-
 try {
 while (resultSet.next()){
     students.add(new Student( //создаем обьект студента и инициализируем
@@ -43,7 +39,6 @@ while (resultSet.next()){
 
    this.dbExecutor.close();
    }
-
 return students;
  }
 }

@@ -1,7 +1,7 @@
 package dbo;
 
 public class TaskGroup  {
-    private String tableName = "TaskGroup"; //помечаем принадлежность к таблице TaskGroup
+    public final static String tableName = "TaskGroup"; //помечаем принадлежность к таблице TaskGroup
 //определяем конструктор
     public TaskGroup(int id, String name, int idCurator){
         //передаем наше имя таблицы для того чтобы родительский класс вызвал конструктор в наследниках(чтобы был параметр)

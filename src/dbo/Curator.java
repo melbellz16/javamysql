@@ -9,6 +9,7 @@ public class Curator {
         this.id = id;
         this.fio = fio;
     }
+    //определяем поля
     private int id;
     private String fio;
 

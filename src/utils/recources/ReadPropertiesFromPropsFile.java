@@ -13,7 +13,7 @@ public class ReadPropertiesFromPropsFile implements IReadProperty<Properties> {
         String adminFolder = System.getProperty("user.dir");
 
         try (InputStream input = new FileInputStream(
-                String.format("%s/src/resources/%s", adminFolder,"jdbc.properties")
+                String.format("%s/src/resources/%s", adminFolder,"task2.properties")
         )) {
             Properties prop = new Properties();
 
